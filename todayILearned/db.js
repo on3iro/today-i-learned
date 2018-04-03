@@ -8,16 +8,17 @@ const db = new sqlite3.Database('./data/til.db', sqlite3.OPEN_READWRITE, (err) =
   console.log('Connection to database succesfully established.')
 })
 
-const query = `SELECT DISTINCT Name name FROM users ORDER BY name`
+const query = `SELECT * FROM users WHERE Name = ?`
+const name = 'Theo'
 
 db.serialize(() => {
-  db.all(query, [], (err, rows) => {
+  db.all(query, [name], (err, rows) => {
     if (err) {
       throw err
     }
 
     rows.forEach((row) => {
-      console.log(row.name)
+      console.log(row)
     })
   })
 })
