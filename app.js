@@ -5,11 +5,13 @@ const routes = require('./routes')
 
 const app = express()
 
-// TODO remove
-app.get('/hello', (req, res) => {
-  res.send('Hello Sandstorm!')
-})
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header("Acces-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next()
+})
 app.use(routes)
 
 app.listen(config.port, () => {
