@@ -7,7 +7,7 @@ import Ul from 'views/components/Ul'
 const renderArticles = (articles) => articles.map(article => {
   return (
     <div>
-      { article.title }{ article.author }
+      { article.title } { article.author }
 
       { article.body }
     </div>
