@@ -1,3 +1,5 @@
 const PORT = 8080
 
-exports.port = PORT
+module.exports = {
+  port: PORT
+}
