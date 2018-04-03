@@ -5,6 +5,7 @@ const routes = require('./routes')
 
 const app = express()
 
+// TODO remove
 app.get('/hello', (req, res) => {
   res.send('Hello Sandstorm!')
 })
@@ -12,5 +13,5 @@ app.get('/hello', (req, res) => {
 app.use(routes)
 
 app.listen(config.port, () => {
-  console.log(`Today-I-Learned runnging on ${config.port}`)
+  console.log(`Today-I-Learned running on ${config.port}`)
 })
