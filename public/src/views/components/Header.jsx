@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 const Header = () => (
   <Wrapper>
-    <Logo>BGAchievements</Logo>
+    <Logo>Today I learned</Logo>
     <NavMain />
   </Wrapper>
 )

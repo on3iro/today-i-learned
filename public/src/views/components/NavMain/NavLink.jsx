@@ -19,10 +19,10 @@ const StyledNavLink = styled(LinkWithActiveClass)`
 
   &.selected {
     background: ${props => props.theme.bgPrimary};
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.white};
 
     &:visited {
-      color: ${props => props.theme.primary};
+      color: ${props => props.theme.white};
     }
   }
 

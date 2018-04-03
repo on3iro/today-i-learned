@@ -1,13 +1,14 @@
 const colors = {
-  monza: '#c8022f',
-  redDevil: '#7F001D',
+  blue: '#00AEEF',
+  darkBlue: '#0076E1',
+  orange: '#FF8800',
   white: '#ffffff',
   black: '#000000'
 }
 
 const defaultTheme = {
-  primary: colors.monza,
-  bgPrimary: colors.redDevil,
+  primary: colors.darkBlue,
+  bgPrimary: colors.blue,
   white: colors.white,
   black: colors.black
 }

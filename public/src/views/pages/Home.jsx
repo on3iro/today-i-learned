@@ -3,13 +3,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import H1 from 'views/components/H1'
+import Articles from 'views/containers/Articles'
 
 const Wrapper = styled.div``
 
 const Home = () => (
   <Wrapper>
-    <H1>BGAchievements</H1>
+    <Articles />
   </Wrapper>
 )
 
