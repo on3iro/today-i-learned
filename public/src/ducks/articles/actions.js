@@ -2,6 +2,6 @@
 
 export const fetchAll = () => {
   return {
-    type: 'ARTICLES'
+    type: 'ARTICLES_FETCH_ALL'
   }
 }
