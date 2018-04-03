@@ -2,10 +2,8 @@
   "name": "todayILearned-frontend",
   "version": "0.0.1",
   "description": "",
-  "repository": {
-  },
-  "keywords": [
-  ],
+  "repository": {},
+  "keywords": [],
   "bugs": {
     "url": ""
   },
