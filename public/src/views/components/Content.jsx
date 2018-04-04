@@ -6,7 +6,7 @@ const Content = styled.div`
   flex-grow: 1;
 
   padding: 20px;
-  max-width: 60%;
+  width: 100%;
   min-height: calc(100% - 40px);
 `
 

@@ -9,11 +9,19 @@ import List from './List'
 const Wrapper = styled.div`
   display: flex;
   flex-flow: row no-wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  width: 100%;
 `
 
+type Article = {
+  title: string,
+  body: string,
+  authorName: string
+}
+
 type Props = {
-  articles: Object
+  articles: Array<Article>
 }
 
 const Articles = ({ articles }: Props) => (
