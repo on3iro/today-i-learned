@@ -1,23 +1,26 @@
 // @flow
 
 import * as React from 'react'
+import styled from 'styled-components'
 
-import Ul from 'views/components/Ul'
+import Detail from './Detail'
+import List from './List'
 
-const renderArticles = (articles) => articles.map(article => {
-  return (
-    <li>
-      { article.title }, { article.author }
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-between;
+`
 
-      { article.body }
-    </li>
-  )
-})
+type Props = {
+  articles: Object
+}
 
-const Articles = ({ articles }: Object) => (
-  <Ul>
-    { renderArticles(articles) }
-  </Ul>
+const Articles = ({ articles }: Props) => (
+  <Wrapper>
+    <List articles={articles} />
+    <Detail />
+  </Wrapper>
 )
 
 export default Articles
