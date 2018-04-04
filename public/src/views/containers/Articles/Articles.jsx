@@ -31,6 +31,7 @@ const Articles = ({ articles, selectedArticle, selectArticle }: Props) => (
     <List
       articles={articles}
       selectArticle={selectArticle}
+      selectedArticle={selectedArticle}
     />
     { selectedArticle &&
       <Detail article={selectedArticle} />

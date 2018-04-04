@@ -9,12 +9,12 @@ const Wrapper = styled.div`
 
   margin: 20px auto;
   border: 1px solid #aaa;
-  padding: 40px;
+  padding: 30px;
   width: 300px;
 `
 
 const Input = styled.input`
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `
 
 type Props = {

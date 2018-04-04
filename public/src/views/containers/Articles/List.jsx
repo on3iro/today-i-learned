@@ -36,14 +36,23 @@ const ArticleButton = styled.button`
   }
 `
 
-const List = ({ articles, selectArticle }: Object) => (
+const Title = styled.span`
+  color: ${props => props.isSelected ? props.theme.secondary : 'inherit'};
+`
+
+const List = ({ articles, selectArticle, selectedArticle }: Object) => (
   <ArticlesUl>
     {
       articles.map(article => {
+        const isSelected = article.id === selectedArticle.id
+
         return (
           <Li key={article.id}>
             <ArticleButton onClick={() => selectArticle(article.id)}>
-              { article.title }, { article.authorName }
+              <Title isSelected={isSelected}>
+                { article.title },
+                { article.authorName }
+              </Title>
             </ArticleButton>
           </Li>
         )

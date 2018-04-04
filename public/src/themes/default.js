@@ -8,6 +8,7 @@ const colors = {
 
 const defaultTheme = {
   primary: colors.darkBlue,
+  secondary: colors.orange,
   bgPrimary: colors.blue,
   primaryFont: '#333333',
   white: colors.white,
