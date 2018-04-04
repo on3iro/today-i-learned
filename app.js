@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const config = require('./config')
 const routes = require('./routes')
@@ -10,6 +11,7 @@ const errorHandler = (err, req, res, next) => {
   res.render('error', { error: err });
 }
 
+app.use(bodyParser.json())
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
