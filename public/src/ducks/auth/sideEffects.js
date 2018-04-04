@@ -5,4 +5,7 @@ import { postRequest } from 'config/sideEffects'
 
 export const postLoginCredentials = (
   credentials: { name: string, password: string }
-) => postRequest(`${API_URL}/auth`, credentials, { timeout: 1000 })
+) => postRequest(`${API_URL}/auth`, credentials, {
+  headers: { 'Content-Type': 'application/json' },
+  timeout: 1000
+})
