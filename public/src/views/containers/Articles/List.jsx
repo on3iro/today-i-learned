@@ -36,19 +36,19 @@ const ArticleButton = styled.button`
   }
 `
 
-const renderArticles = (articles) => articles.map(article => {
-  return (
-    <Li key={article.id}>
-      <ArticleButton>
-        { article.title }, { article.authorName }
-      </ArticleButton>
-    </Li>
-  )
-})
-
-const List = ({ articles }: Object) => (
+const List = ({ articles, selectArticle }: Object) => (
   <ArticlesUl>
-    { renderArticles(articles) }
+    {
+      articles.map(article => {
+        return (
+          <Li key={article.id}>
+            <ArticleButton onClick={() => selectArticle(article.id)}>
+              { article.title }, { article.authorName }
+            </ArticleButton>
+          </Li>
+        )
+      })
+    }
   </ArticlesUl>
 )
 

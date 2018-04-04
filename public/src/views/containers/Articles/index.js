@@ -10,14 +10,17 @@ import ArticlesComponent from './Articles.jsx'
 // Redux
 const mapStateToProps = (state, props) => {
   const articles = Articles.selectors.getArticles(state)
+  const selectedArticle = Articles.selectors.getSelectedArticle(state)
 
   return {
-    articles
+    articles,
+    selectedArticle
   }
 }
 
 const dispatchProps = {
-  fetchArticles: Articles.actions.fetchAll
+  fetchArticles: Articles.actions.fetchAll,
+  selectArticle: Articles.actions.selectArticle
 }
 
 const withRedux = connect(mapStateToProps, dispatchProps)
