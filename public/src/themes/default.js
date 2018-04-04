@@ -9,6 +9,7 @@ const colors = {
 const defaultTheme = {
   primary: colors.darkBlue,
   bgPrimary: colors.blue,
+  primaryFont: '#333333',
   white: colors.white,
   black: colors.black
 }

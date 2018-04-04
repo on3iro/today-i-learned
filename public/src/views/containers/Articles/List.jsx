@@ -13,20 +13,35 @@ const ArticlesUl = Ul.extend`
 `
 
 const Li = styled.li`
+  width: 100%;
+`
+
+const ArticleButton = styled.button`
   display: block;
 
   margin-bottom: 10px;
+  border: none;
   padding: 10px;
+  width: 100%;
 
   background: ${props => props.theme.white};
 
   box-shadow: 2px 2px 2px #aaa;
+
+  &:hover {
+    background: ${props => props.theme.bgPrimary};
+    color: ${props => props.theme.white};
+
+    cursor: pointer;
+  }
 `
 
 const renderArticles = (articles) => articles.map(article => {
   return (
-    <Li>
-      { article.title }, { article.authorName }
+    <Li key={article.id}>
+      <ArticleButton>
+        { article.title }, { article.authorName }
+      </ArticleButton>
     </Li>
   )
 })

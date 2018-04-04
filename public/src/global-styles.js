@@ -14,6 +14,7 @@ injectGlobal`
     height: 100%;
     min-height: 100%;
 
+    color: '#333';
     font-family: 'Arial', sans-serif;
   }
 
