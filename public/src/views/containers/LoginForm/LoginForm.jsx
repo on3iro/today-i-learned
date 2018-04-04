@@ -3,7 +3,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
+const Wrapper = styled.form`
   display: flex;
   flex-flow: column nowrap;
 
@@ -21,14 +21,16 @@ type Props = {
   name: string,
   password: string,
   handleName: Function,
-  handlePassword: Function
+  handlePassword: Function,
+  login: Function
 }
 
 const LoginForm = ({
   name,
   handleName,
   password,
-  handlePassword
+  handlePassword,
+  login
 }: Props) => (
   <Wrapper>
     <Input
@@ -43,10 +45,14 @@ const LoginForm = ({
       onChange={handlePassword}
       placeholder='password'
     />
-    { /* TODO */ }
     <button
       type='submit'
-      onClick={() => console.log('clicked')}
+      onClick={
+        (e) => {
+          e.preventDefault()
+          login(name, password)
+        }
+      }
     >
       Login
     </button>
