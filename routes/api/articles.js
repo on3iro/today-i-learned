@@ -17,7 +17,7 @@ router.get('/articles', (req, res, next) => {
   connection.serialize(() => {
     connection.all(query, [], (err, rows) => {
       if (err) {
-        throw err
+        res.status(500).send('An internal server error occured')
       }
 
       res.json(rows)
