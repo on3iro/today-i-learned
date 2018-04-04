@@ -6,6 +6,7 @@ const connection = db.connection
 router.get('/articles', (req, res, next) => {
   const query = `
     SELECT
+      articles.id,
       title,
       body,
       users.name as authorName
