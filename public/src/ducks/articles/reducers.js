@@ -36,6 +36,22 @@ const list = (
   }
 }
 
+const selected = (
+  state = 1,
+  action
+) => {
+  switch (action.type) {
+    case 'ARTICLE_SELECT': {
+      return action.payload.id
+    }
+
+    default: {
+      return state
+    }
+  }
+}
+
 export default combineReducers({
-  list
+  list,
+  selected
 })

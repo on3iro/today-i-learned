@@ -21,13 +21,20 @@ type Article = {
 }
 
 type Props = {
-  articles: Array<Article>
+  articles: Array<Article>,
+  selectedArticle: Article,
+  selectArticle: Function
 }
 
-const Articles = ({ articles }: Props) => (
+const Articles = ({ articles, selectedArticle, selectArticle }: Props) => (
   <Wrapper>
-    <List articles={articles} />
-    <Detail />
+    <List
+      articles={articles}
+      selectArticle={selectArticle}
+    />
+    { selectedArticle &&
+      <Detail article={selectedArticle} />
+    }
   </Wrapper>
 )
 

@@ -19,3 +19,10 @@ export const fetchAllError = (err: Object) => {
     payload: { err }
   }
 }
+
+export const selectArticle = (id: number) => {
+  return {
+    type: 'ARTICLE_SELECT',
+    payload: { id }
+  }
+}
