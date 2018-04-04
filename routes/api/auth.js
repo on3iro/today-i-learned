@@ -22,7 +22,10 @@ router.post('/auth', (req, res, next) => {
 
       const hasRow = rows.length
 
-      if (hasRow && rows[0].password === password) {
+      if (
+        hasRow &&
+        rows[0].password === password
+      ) {
         return res.json({ id: rows[0].id, name })
       }
 

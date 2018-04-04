@@ -32,6 +32,7 @@ const NavMain = () => (
   <Wrapper>
     <ExtendedUl>
       <Li><NavLink to='/home'>Home</NavLink></Li>
+      <Li><NavLink to='/login'>Login</NavLink></Li>
     </ExtendedUl>
   </Wrapper>
 )

@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components'
 import defaultTheme from 'themes/default'
 
 import Home from 'views/pages/Home'
+import Login from 'views/pages/Login'
 
 import Content from 'views/components/Content'
 import Header from 'views/components/Header'
@@ -27,6 +28,7 @@ const App = () => (
           <Switch>
             <Route exact path='/' render={() => <Redirect to='/home' />} />
             <Route exact path='/home' component={Home} />
+            <Route exact path='/login' component={Login} />
           </Switch>
         </Content>
       </PageWrapper>
