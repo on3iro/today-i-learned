@@ -5,6 +5,10 @@ const routes = require('./routes')
 
 const app = express()
 
+const errorHandler = (err, req, res, next) => {
+  res.status(500);
+  res.render('error', { error: err });
+}
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
@@ -13,6 +17,7 @@ app.use((req, res, next) => {
   next()
 })
 app.use(routes)
+app.use(errorHandler)
 
 app.listen(config.port, () => {
   console.log(`Today-I-Learned running on ${config.port}`)
